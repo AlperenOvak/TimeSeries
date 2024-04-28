@@ -1,0 +1,39 @@
+Bu yarışmada yarışmacıların görevi, sağlanan finansal verileri kullanarak bir finansal varlığın gelecekteki açılış, en yüksek, en düşük ve kapanış fiyatlarını tahmin etmeyi içeriyor. Bu, veri kümesini anlama, ilgili özellikleri mühendislik etme, uygun bir tahmin modeli seçme, modeli eğitme, performansını değerlendirme, tahminler yapma ve daha iyi doğruluk için modeli iyileştirme sürecini içerir. Sonuç olarak, amacı yatırımcılara veya tüccarlara gelecekteki fiyat hareketleri hakkında bilinçli kararlar vermelerine yardımcı olmaktır. Başka bir deyişle, geçmiş fiyat hareketleri verildiğinde, görev bir sonraki zaman diliminde fiyatları tahmin etmektir.
+
+"ail_frx.csv" adlı bir CSV dosyası verilecektir. Bu dosyada "date", "open", "high", "low" ve "close" sütunları bulunmaktadır. Bu sütunlar ayrıntılı olarak aşağıda açıklanmıştır.Submission file'daki belirtilen günler süresince çalışmanız beklenmektedir. Boş gönderimler dikkate alınmayacaktır.
+
+Dosyalar
+
+ail_frx.csv - (AI Club Lirası - Forex Lirası)
+bk_frx.csv (Borsa Kaplanı - Forex Lirası)
+crp_ail.csv (Kripton - AI Club Lirası)
+zzc_ail.csv (Zart Zurt Coin - AI Club Lirası)
+sampleSubmission.csv - Yarışmada istenen dosyanın rastgele tahmin edilmiş verilerle doldurulmuş hali
+
+Sütunlar
+
+OHLC (Açılış, En Yüksek, En Düşük, Kapanış) verileriyle uğraşırken, genellikle bir finansal aracın (örneğin, bir hisse senedi, döviz çifti veya emtia) belirli zaman aralıkları boyunca fiyat hareketlerini yakalayan bir yapıda düzenlendiğini görebilirsiniz. Her bileşenin tipik olarak ne anlama geldiğini açıklayalım:
+
+Tarih Damgası (date): Bu sütun her bir veri girdisi için verilen tarih damgasını içerir (timestamp). Unix Timestamp şeklinde verilen bu sütun, yarışmacıların tahmin edecekleri tarihleri içerir.
+
+Açılış Fiyatı (open): Bu, belirli zaman aralığının başında finansal aracın fiyatını temsil eder. Örneğin, bir hisse senedinin günlük OHLC verilerine bakıyorsanız, açılış fiyatı o gün piyasanın açıldığı fiyat olacaktır.
+
+En Yüksek Fiyat (high): En yüksek fiyat, aynı zaman aralığında finansal aracın ulaştığı en yüksek fiyatı gösterir. Bu, o dönemdeki en yüksek işlem faaliyeti veya yatırımcı duyarlılığının seviyesini yansıtır.
+
+En Düşük Fiyat (low): Buna karşılık, düşük fiyat, aynı zaman aralığında finansal aracın düştüğü en düşük fiyatı yansıtır. Bu, o dönemdeki en düşük işlem faaliyeti veya yatırımcı duyarlılığının seviyesini belirlemeye yardımcı olur.
+
+Kapanış Fiyatı (close): Bu, belirli zaman aralığının sonunda finansal aracın fiyatını temsil eder. Örneğin, günlük OHLC verilerinde, kapanış fiyatı piyasanın kapanışında hisse senedinin fiyatı olacaktır.
+
+Genellikle, bu OHLC veri noktaları, her birinin farklı bir zaman aralığını (örneğin, gün, saat, dakika) temsil ettiği ve her bir sütunun farklı özniteliklere (açılış, en yüksek, en düşük, kapanış) karşılık geldiği yapısal bir formatta düzenlenmiştir. Her bir aralıkla ilişkilendirilen zaman damgaları, fiyat hareketlerinin zaman içindeki sırasını sağlayarak zaman içindeki fiyat hareketlerinin analizine izin verir.
+
+Bu OHLC verilerini tahmin görevleri için kullanan yarışmacılar, bu yapısal formattaki verileri etkili bir şekilde ayrıştırmayı ve yorumlamayı anlamalıdır. Gözlemlenen desenlere dayanarak içgörüler çıkarmak veya tahminler yapmak için çeşitli analitik teknikleri ve algoritmaları kullanabilirler.
+
+Submission File Formatı :
+Yarışmacılar tahminleri gerçekleştirdikten sonra bir submission file oluştururlar ve bu dosyanın formatı sırasıyla şu şekildedir:
+
+bk_frx
+crp_ail
+ail_frx
+zzc_ail
+Submission file'daki tahmin edilen tarihler bk_frx için ve diğer üçü (crp_ail, ail_frx, zzc_ail) için farklıdır. Tarih damgalarının arasında genellikle bir saat vardır ve yaklaşık olarak 1 Aralık 2014 - 11 Aralık 2014 tarihleri arasındadır.
+Dosyadaki belirtien id ve tarih damgalarının değiştirilmemesi yalnızca OHLC sütunlarının tahmin edilmesi beklenilmektedir.
